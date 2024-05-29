@@ -1,20 +1,30 @@
 document
   .getElementById("searchForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // 阻止表单的默认提交行为
-    const input = document.getElementById("searchInput").value.trim(); // 获取输入值并去除两边空格
-    const urls = keywordToPage[input]; // 根据输入获取对应的URL列表
+    event.preventDefault(); // Prevent default form submission
+    const input = document.getElementById("searchInput").value.trim(); // Get the input value and trim whitespace
+    const urls = searchKeywords(input); // Get corresponding URLs based on input
 
-    if (urls) {
+    if (urls.length > 0) {
       if (urls.length === 1) {
-        window.location.href = urls[0]; // 如果只有一个URL，直接跳转
+        window.location.href = urls[0]; // If only one URL, navigate directly
       } else {
-        showResults(urls); // 显示结果列表让用户选择
+        showResults(urls); // Show results dropdown for multiple matches
       }
     } else {
-      alert("為找到相關頁面，請輸入正確的關鍵字。"); // Alert if no results found
+      alert("未找到相关页面，请输入正确的关键字。"); // Alert if no results found
     }
   });
+
+function searchKeywords(input) {
+  const results = [];
+  for (const [keyword, urls] of Object.entries(keywordToPage)) {
+    if (keyword.includes(input)) {
+      results.push(...urls); // Push all matching URLs to results
+    }
+  }
+  return results;
+}
 
 function showResults(urls) {
   const resultsContainer = document.getElementById("resultsContainer");
@@ -37,26 +47,6 @@ function goToSelectedPage() {
 }
 
 const keywordToPage = {
-  周全性老年評估: ["post1.html#s1"],
-  老年憂鬱症: ["post1.html#s1"],
-  老人自殺: ["post1.html#s1"],
-  老年認知功能障礙: ["post1.html#s1"],
-  心理病症: ["post1.html#s1"],
-  自尊心下降: ["post1.html#s1"],
-  神經學檢查: ["post1.html#s1"],
-  實驗室檢查: ["post1.html#s1"],
-  影像學檢查: ["post1.html#s1"],
-  心智測驗評估: ["post1.html#s1"],
-  焦慮: ["post1.html#s1"],
-  老年憂鬱症: ["post1.html#s1"],
-  老年病症候群: ["post1.html#s1"],
-  輕度認知障礙: ["post1.html#s1"],
-
-  樂齡健康促進: ["post1.html#s2"],
-  症候群: ["post1.html#s2"],
-  阿茲海默症: ["post1.html#s2"],
-  額顳葉型失智症: ["post1.html#s2"],
-  路易氏體失智症: ["post1.html#s2"],
   失智症: [
     "post1.html#s2",
     "post2.html#s4",
@@ -64,78 +54,37 @@ const keywordToPage = {
     "post3.html#s7",
     "post3.html#s8",
   ],
+  周全性老年評估: ["post1.html#s1"],
+  老年憂鬱症: ["post1.html#s1"],
+  老人自殺: ["post1.html#s1"],
+  老年認知功能障礙: ["post1.html#s1"],
+  樂齡健康促進: ["post1.html#s2"],
   ARCS動機模式: ["post1.html#s2"],
   學習成效: ["post1.html#s2"],
-  激發學習動機策略: ["post1.html#s2"],
-
   輕度認知障礙: ["post1.html#s3"],
   失智症預防: ["post1.html#s3"],
   認知運動操: ["post1.html#s3"],
-  CogniCise: ["post1.html#s3"],
-  複合性運動: ["post1.html#s3"],
-
   精神行為症狀照護: ["post2.html#s4"],
   精神居家治療: ["post2.html#s4"],
-
   生態心理學: ["post2.html#s5"],
   園藝治療: ["post2.html#s5"],
   輔助治療: ["post2.html#s5"],
   失智症長者: ["post2.html#s5"],
   福祉效益: ["post2.html#s5"],
-  Alternative: ["post2.html#s5"],
-  Therapy: ["post2.html#s5"],
-  替代療法: ["post2.html#s5"],
-  音樂治療: ["post2.html#s5"],
-  藝術治療: ["post2.html#s5"],
-  芳香療法: ["post2.html#s5"],
-  馬術治療: ["post2.html#s5"],
-  單方治療: ["post2.html#s5"],
-  運動治療: ["post2.html#s5"],
-  大笑治療: ["post2.html#s5"],
-  複方治療: ["post2.html#s5"],
-  綠色照護: ["post2.html#s5"],
-  HorticultureTherapy: ["post2.html#s5"],
-
   戲劇治療: ["post2.html#s6"],
   失智症照護: ["post2.html#s6"],
   Dementia: ["post2.html#s6"],
   Dramatherapy: ["post2.html#s6"],
   Dementiacare: ["post2.html#s6"],
-  中醫藥成人教育: ["post2.html#s6"],
-
   中醫藥: ["post3.html#s7"],
   成人教育: ["post3.html#s7"],
-  畫鐘測驗: ["post3.html#s7"],
-  ClockDrawingTest: ["post3.html#s7"],
-  失智症篩檢工具: ["post3.html#s7"],
-
   失智社區服務據點: ["post3.html#s8"],
   線上課程: ["post3.html#s8"],
   長期照護: ["post3.html#s8"],
-  社區支援: ["post3.html#s8"],
-  失智症預防: ["post3.html#s8"],
-  社區支援: ["post3.html#s8"],
-  社交活動: ["post3.html#s8"],
-  心理諮詢: ["post3.html#s8"],
-  日間照護: ["post3.html#s8"],
-  虛擬互動情境: ["post3.html#s8"],
-  Dementia: ["post3.html#s8"],
-  Prevention: ["post3.html#s8"],
-  中醫藥成人教育: ["post3.html#s8"],
-
-  失智社區服務據點: ["post3.html#s8"],
-  日照中心: ["post3.html#s8"],
-
   日照中心: ["post3.html#s9"],
   社會互動: ["post3.html#s9"],
   互動合作: ["post3.html#s9"],
-  DayCareCenter: ["post3.html#s9"],
-  SocialInteraction: ["post3.html#s9"],
-  InteractiveCooperation: ["post3.html#s9"],
-  失智症照顧測繪: ["post3.html#s9"],
-  簡易同儕互動問卷: ["post3.html#s9"],
-  活動成效評估: ["post3.html#s9"],
-  Dementia: ["post3.html#s9"],
-  CareMapping: ["post3.html#s9"],
-  DCM: ["post3.html#s9"],
+  Daycarecenter: ["post3.html#s9"],
+  Socialinteraction: ["post3.html#s9"],
+  Interactivecooperation: ["post3.html#s9"],
 };
