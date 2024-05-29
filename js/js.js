@@ -3,14 +3,26 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission
     const input = document.getElementById("searchInput").value.trim(); // Get the input value and trim whitespace
+    if (input === "") {
+      hideResults();
+      return;
+    }
     const results = searchKeywords(input); // Get corresponding results based on input
 
     if (results.length > 0) {
       showResults(results, input); // Show results for matches
     } else {
       alert("未找到相关页面，请输入正确的关键字。"); // Alert if no results found
+      hideResults();
     }
   });
+
+document.getElementById("searchInput").addEventListener("input", function () {
+  const input = document.getElementById("searchInput").value.trim();
+  if (input === "") {
+    hideResults();
+  }
+});
 
 function searchKeywords(input) {
   const results = [];
@@ -43,6 +55,14 @@ function showResults(results, input) {
     resultItem.appendChild(resultSummary);
     resultsContainer.appendChild(resultItem);
   });
+
+  resultsContainer.style.display = "block"; // Show the results container
+}
+
+function hideResults() {
+  const resultsContainer = document.getElementById("resultsContainer");
+  resultsContainer.innerHTML = ""; // Clear previous results
+  resultsContainer.style.display = "none"; // Hide the results container
 }
 
 function highlightText(text, keyword) {
@@ -60,7 +80,7 @@ const keywordToPage = {
     {
       title: "失智症文章2",
       url: "post2.html#s4",
-      summary: "这是关于失智症的文章2摘要摘要喔。",
+      summary: "这是关于失智症的文章2摘要。",
     },
     {
       title: "失智症文章3",
