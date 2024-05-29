@@ -169,6 +169,11 @@ const keywordToLinks = {
     "post3.html#s8",
   ],
   "#周全性老年評估": ["post1.html#s1"],
+  "#身體檢查": ["post1.html#s1"],
+  "#神經學檢查": ["post1.html#s1"],
+  "#實驗室檢查": ["post1.html#s1"],
+  "#影像學檢查": ["post1.html#s1"],
+
   "#老年憂鬱症": ["post1.html#s1"],
   "#老人自殺": ["post1.html#s1"],
   "#老年認知功能障礙": ["post1.html#s1"],
