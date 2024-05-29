@@ -41,6 +41,7 @@ const keywordToPage = {
   老年憂鬱症: ["post1.html#s1"],
   老人自殺: ["post1.html#s1"],
   老年認知功能障礙: ["post1.html#s1"],
+  心理病症: ["post1.html#s1"],
 
   樂齡健康促進: ["post1.html#s2"],
   失智症: [
@@ -74,10 +75,12 @@ const keywordToPage = {
 
   中醫藥: ["post3.html#s7"],
   成人教育: ["post3.html#s7"],
+  畫鐘測驗: ["post3.html#s7"],
 
   失智社區服務據點: ["post3.html#s8"],
   線上課程: ["post3.html#s8"],
   長期照護: ["post3.html#s8"],
+  社區支援: ["post3.html#s8"],
 
   日照中心: ["post3.html#s9"],
   社會互動: ["post3.html#s9"],
@@ -85,4 +88,5 @@ const keywordToPage = {
   DayCareCenter: ["post3.html#s9"],
   SocialInteraction: ["post3.html#s9"],
   InteractiveCooperation: ["post3.html#s9"],
+  失智症照顧測繪: ["post3.html#s9"],
 };
