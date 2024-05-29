@@ -82,6 +82,16 @@
               <a class="nav-link px-lg-3 py-3 py-lg-4" href="FAQ.html">FAQ</a>
             </li>
           </ul>
+          <form id="searchForm" class="d-flex ms-2">
+            <input
+              id="searchInput"
+              class="form-control me-1"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
         </div>
       </div>
     </nav>
@@ -244,6 +254,110 @@
                     </tr>
                   </tbody>
                 </table>
+
+                <!-- 分隔線-->
+                <hr class="my-4" />
+
+                <h1>關鍵詞索引典介紹</h1>
+                <p>
+                  關鍵詞索引典 (Thesaurus)
+                  是一種專業工具，用於組織和檢索信息。它透過系統化地排列詞彙，幫助用戶在進行資料檢索時找到合適的主題詞和相關詞彙。關鍵詞索引典通常用於圖書館、資料庫和其他信息檢索系統，以確保使用一致的術語來描述主題。
+                </p>
+                <h2>重要標識及其解釋</h2>
+                <h3>USE (使用)</h3>
+                <p>
+                  <strong>含義：</strong
+                  >指示用戶應使用指定的標準詞或首選詞，替代其他變體或同義詞。這樣做可以確保在檢索過程中使用一致的術語，從而提高檢索的準確性和效率。
+                </p>
+                <p>
+                  <strong>例子：</strong>老年心理健康
+                  <strong>USE</strong> 老年人心理健康
+                </p>
+                <p>
+                  <strong>說明：</strong
+                  >當用戶檢索“老年心理健康”時，應改為使用標準術語“老年人心理健康”。
+                </p>
+                <h3>UF (Used For，被使用)</h3>
+                <p>
+                  <strong>含義：</strong
+                  >指示該標準詞是某些變體或同義詞的替代詞。這些變體或同義詞應被替換為標準詞，以確保資料的一致性和易檢索性。
+                </p>
+                <p>
+                  <strong>例子：</strong>老年人心理健康
+                  <strong>UF</strong> 老人心理健康
+                </p>
+                <p>
+                  <strong>說明：</strong
+                  >表示“老年人心理健康”是標準詞，應用來取代“老人心理健康”等變體詞。
+                </p>
+                <h3>BT (Broader Term，廣義詞)</h3>
+                <p>
+                  <strong>含義：</strong
+                  >指示一個更廣泛的或更上層次的詞彙，通常涵蓋更多的範疇。這些廣義詞可以幫助用戶理解主題的更大背景或相關領域。
+                </p>
+                <p>
+                  <strong>例子：</strong>老年人心理健康
+                  <strong>BT</strong> 心理健康
+                </p>
+                <p>
+                  <strong>說明：</strong
+                  >表示“心理健康”是一個更廣泛的概念，涵蓋了“老年人心理健康”。用戶可以通過檢索“心理健康”來找到更多相關資料。
+                </p>
+                <h3>NT (Narrower Term，狹義詞)</h3>
+                <p>
+                  <strong>含義：</strong
+                  >指示一個更具體的或下層次的詞彙，通常是廣義詞的一部分。這些狹義詞可以幫助用戶進一步深入某一特定主題。
+                </p>
+                <p>
+                  <strong>例子：</strong>心理健康
+                  <strong>NT</strong> 老年人心理健康
+                </p>
+                <p>
+                  <strong>說明：</strong
+                  >表示“老年人心理健康”是一個更具體的概念，屬於“心理健康”的範疇。用戶可以通過檢索“老年人心理健康”來獲得更加專注的資料。
+                </p>
+                <h3>RT (Related Term，相關詞)</h3>
+                <p>
+                  <strong>含義：</strong
+                  >指示一個相關的但不屬於上下層次關係的詞彙。這些相關詞可以幫助用戶找到與主題有關但從不同角度切入的資料。
+                </p>
+                <p>
+                  <strong>例子：</strong>老年人心理健康
+                  <strong>RT</strong> 老年人社會支持
+                </p>
+                <p>
+                  <strong>說明：</strong
+                  >表示“老年人社會支持”是與“老年人心理健康”相關的概念，雖然兩者不屬於上下層次關係，但在主題上有一定聯繫。用戶可以檢索相關詞來獲得更全面的資訊。
+                </p>
+                <h1>使用關鍵詞索引典的效益</h1>
+                <p>
+                  使用關鍵詞索引典的這些標識 (USE, UF, BT, NT, RT)
+                  可以有效地組織和檢索信息，幫助用戶找到與其研究主題相關的資料：
+                </p>
+                <ul>
+                  <li>
+                    <strong>USE:</strong> 指導使用標準詞，以確保檢索的一致性。
+                  </li>
+                  <li>
+                    <strong>UF:</strong>
+                    標明哪些變體詞應被標準詞取代，以提高資料的一致性。
+                  </li>
+                  <li>
+                    <strong>BT:</strong>
+                    提供更廣泛的概念，幫助用戶了解主題的宏觀背景。
+                  </li>
+                  <li>
+                    <strong>NT:</strong>
+                    提供更具體的概念，幫助用戶深入了解特定主題。
+                  </li>
+                  <li>
+                    <strong>RT:</strong>
+                    提供相關但非上下層次的概念，幫助用戶找到更多角度的相關資料。
+                  </li>
+                </ul>
+                <p>
+                  透過這些標識，用戶能夠更加精確地定位和檢索到所需的信息，從而提升資料檢索的效率和效果。
+                </p>
               </div>
             </div>
           </div>
@@ -276,5 +390,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="js/js.js"></script>
   </body>
 </html>
