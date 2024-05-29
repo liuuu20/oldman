@@ -60,7 +60,7 @@ const keywordToPage = {
     {
       title: "失智症文章2",
       url: "post2.html#s4",
-      summary: "这是关于失智症的文章2摘要。",
+      summary: "这是关于失智症的文章2摘要摘要喔。",
     },
     {
       title: "失智症文章3",
