@@ -12,7 +12,7 @@ document
         showResults(urls); // 显示结果列表让用户选择
       }
     } else {
-      alert("未找到相关页面，请输入正确的关键字。"); // Alert if no results found
+      alert("為找到相關頁面，請輸入正確的關鍵字。"); // Alert if no results found
     }
   });
 
@@ -82,7 +82,7 @@ const keywordToPage = {
   日照中心: ["post3.html#s9"],
   社會互動: ["post3.html#s9"],
   互動合作: ["post3.html#s9"],
-  Daycarecenter: ["post3.html#s9"],
-  Socialinteraction: ["post3.html#s9"],
-  Interactivecooperation: ["post3.html#s9"],
+  DayCareCenter: ["post3.html#s9"],
+  SocialInteraction: ["post3.html#s9"],
+  InteractiveCooperation: ["post3.html#s9"],
 };
