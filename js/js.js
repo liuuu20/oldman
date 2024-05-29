@@ -42,6 +42,7 @@ const keywordToPage = {
   老人自殺: ["post1.html#s1"],
   老年認知功能障礙: ["post1.html#s1"],
   心理病症: ["post1.html#s1"],
+  自尊心下降: ["post1.html#s1"],
 
   樂齡健康促進: ["post1.html#s2"],
   失智症: [
